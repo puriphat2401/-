@@ -1,0 +1,31 @@
+#include <algorithm>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int R1[] = {176,174,180,165,171,173,185,170,185};
+    int W1[] = {100,60,100,78,70,95,53,120,60};
+    string N1[] = {"แชมป์","โอ้","เต","ปั่น","เตโช","โจนัส","เฟรม","ต้นน้ำ","ติน"};
+
+    int n = sizeof(N1) / sizeof(N1[0]);
+
+    sort(R1, R1 + n);
+    sort(W1, W1 + n);
+    sort(N1, N1 + n);
+
+    cout << "Height: ";
+    for (int i : R1) cout << i << " ";
+    cout << endl;
+
+    cout << "Weight: ";
+    for (int i : W1) cout << i << " ";
+    cout << endl;
+
+    cout << "Name: ";
+    for (string i : N1) cout << i << " ";
+    cout << endl;
+
+    return 0;
+}
